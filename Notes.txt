@@ -1,0 +1,30 @@
+Process of building any website :
+1) Define
+Who the website is for?
+What the website is for? define both business and user goals.
+target Audience.
+
+2) plan
+
+Website content (text, videos, images, etc.)
+for bigger website plan the sitemap (different pages and their relation to each other)
+for each page plan the sections that page need to better convey the message.
+3) Sketch
+iterative process,
+use pen/paper or figma
+
+4) Design and Build
+5) Test and optimise
+
+test all major browsers
+test on actual mobile devices
+accessibility
+run lighthouse performance test using chrome devtools
+SEO
+accessibility
+6) Launch
+hosting platform,
+domain name
+
+7) maintain and update
+
