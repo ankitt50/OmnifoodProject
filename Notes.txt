@@ -27,4 +27,37 @@ hosting platform,
 domain name
 
 7) maintain and update
+analytics software
+
+
+
+
+Responsive web design principles :
+
+-- webpage adjust its layout and visual style to any possible screen size
+-- There are 4 main ingredients to this : fluid layouts, responsive units, flexible images, 
+media queries.
+-- Desktop first [traditional way] (or) mobile first approach [modern way]
+-- use max-width instead of width. If parent element width is less than the maximum width, then 
+   element will take the width of the parent element.
+-- rem (root element font size) : basically the font size of the 'html' element (which)
+   is the root element of all elements. By default its equal to 16px.
+   i.e. 1 rem = 16 px
+
+   percentage (62.5%) : it is the percentage of the user's browser's font size. Which 
+   by default 16px. But user can change it.
+   So, if we want to change the default font size of the 'html' element then instead of using 
+   'px' use '%'. Other wise whatever the user selects from the browser as their default
+   font size, they will see a fixed font size. This can cause assessibility issues
+   for some users.
+
+   html {
+       font-size : 62.5%;
+   }
+
+   .some-cls {
+       max-width : 
+   }
+
+
 

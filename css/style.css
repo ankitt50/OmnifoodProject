@@ -1,0 +1,7 @@
+/* Always use this below universal selector 
+to do global reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
