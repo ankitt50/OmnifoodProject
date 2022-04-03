@@ -18,11 +18,12 @@ html {
 }
 .hero-section {
   background-color: #fdf2e9;
-  padding: 9.6rem 0;
+  padding: 4.8rem 0 9.6rem 0;
 }
 .hero {
   max-width: 130rem;
   margin: 0 auto;
+  padding: 0 3.2rem;
   display: grid;
   gap: 9.6rem;
   grid-template-columns: 1fr 1fr;
@@ -126,4 +127,98 @@ html {
 .delivered-text span {
   color: #cf711f;
   font-weight: 700;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdf2e9;
+
+  /* generally its not required, as it will
+  take the height of the children
+  
+  But we want to make this header fixed. So, it will be helpful in that
+  */
+  height: 9.6rem;
+  padding: 0 4.8rem;
+}
+
+.logo {
+  height: 2.2rem;
+}
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 3.2rem;
+
+  align-items: center;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  /* always make text decoartion as none for links/anchor tags*/
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #cf711f;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  /* adding the parent class name in the selector will
+  increase the specificity of the CSS style. Hence it will 
+  be applied on a greater priority*/
+
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  color: #fff;
+  background-color: #e67e22;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #cf711f;
+}
+
+.section-how {
+  background-color: #e67e22;
+  padding: 9.6rem 0;
+}
+
+/* Reusable code
+all below CSS styles and classes are reusable.
+*/
+.container {
+  /* except for the hero section 
+  all the subsequent sections can use thos container
+  as the parent */
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto; /* to center the container*/
+}
+
+/*reusable grids*/
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr); /* 1fr 1fr*/
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr); /* 1fr 1fr 1fr*/
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr); /* 1fr 1fr 1fr 1fr*/
 }
