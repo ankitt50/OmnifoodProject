@@ -5,6 +5,15 @@ to do global reset */
   margin: 0;
   box-sizing: border-box;
 }
+*:focus {
+  outline: none;
+
+  /* outline: 4px dotted #e67e22
+  outline-offset : 8px
+  */
+
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+}
 
 body {
   font-family: "Rubik", sans-serif;
@@ -25,6 +34,10 @@ html {
 }
 
 .section-pricing {
+  padding: 9.6rem 0;
+}
+
+.section-cta {
   padding: 9.6rem 0;
 }
 
@@ -293,6 +306,93 @@ html {
   line-height: 1.8;
 }
 
+.cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  /* background-color: #e67e22; */
+  box-shadow: 0 2.4rem 4.8rem rgb(0, 0, 0, 0.15);
+  border-radius: 11px;
+  /* background-image: linear-gradient(90 deg, red, #e67e22); */
+  /*                                 to make it vertical,  start color,  end color*/
+  /* background-image: linear-gradient(to right, red, #e67e22);
+  background-image: linear-gradient(to left, red, #e67e22); */
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+
+  /* height: 50rem; */
+  overflow: hidden;
+}
+
+.cta-text-box {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem; /*Top Right Bottom Left*/
+  color: #45260a;
+}
+
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+.cta .heading-secondary {
+  color: #45260a;
+  margin-bottom: 3.2rem;
+}
+
+.cta-img-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(235, 151, 78, 0.35),
+      rgba(230, 125, 34, 0.35)
+    ),
+    url("../img/eating.jpg");
+  background-size: cover;
+  /* to make sure that no matter what the size 
+  of the container the image will always cover it 
+  entirely. */
+  background-position: center; /*  can be useful if the image size is bigger than the container*/
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  /* by default it doesn't inherit font-family from body,
+  but we can force it to inherit */
+  font-family: inherit;
+
+  /* inherit keyword can be used for other CSS properties as
+  well, like 'color' */
+  color: inherit;
+
+  border: none;
+  background-color: #fdf2e9;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cta-form input::placeholder {
+  color: #aaa;
+}
+
+.cta-form *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(235, 242, 233, 0.5);
+}
+
 .heading-primary,
 .heading-secondary,
 .heading-tertiary {
@@ -345,6 +445,7 @@ html {
   margin-bottom: 4.8rem;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   font-size: 2rem;
@@ -353,12 +454,28 @@ html {
   display: inline-block;
   border-radius: 9px;
   font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+
   /* now when state is changed, it 
   will be occur slowly. 
   
   Always do it in the original state element
   */
   transition: all 0.3s;
+}
+
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
 }
 
 .btn--full:link,
